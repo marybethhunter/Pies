@@ -83,23 +83,28 @@ const buttons = () => {
 
 const filterPies = (array, instructor) => {
   return array.filter(pieObject => pieObject.instructor === instructor);
-}
+};
 
 //initially just the button clicks of if statements - then adding filter function
 const handleButtonClick = (event) => {
   if (event.target.id === "all") {
-    console.log("All's button");
+    const allPies = filterPies(pies);
+    pieBuilder(pies);
   } 
   if (event.target.id === "trinity") {
-    console.log("Trinity's button");
+    const trinPies = filterPies(pies, "Trinity");
+    pieBuilder(trinPies);
   } 
   if (event.target.id === "aja") {
-    console.log("Aja's button");
+    const ajaPies = filterPies(pies, "Aja");
+    pieBuilder(ajaPies);
   } 
   if (event.target.id === "doc") {
-    console.log("Doc's button");
+    const docPies = filterPies(pies, "Doc");
+    pieBuilder(docPies);
   }
 };
+
 
 const pieBuilder = (piesArray) => {
   let domString = "";
@@ -133,3 +138,16 @@ const init = () => {
 };
 
 init();
+
+
+
+
+
+//code that doesn't make sense to me
+//if (event.target.id === "all" || event.target.id === "buttonContainer") {
+  //pieBuilder(pies);
+//} else {
+ // const pieArray = filterPies(pies, event.target.id);
+ // pieBuilder(pieArray);
+//}
+//};
