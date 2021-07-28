@@ -1,5 +1,5 @@
 body {
-  background-color: lightskyblue;
+  background-color: rgb(177, 216, 216);
 }
 
 .pieStyles, 
@@ -14,6 +14,18 @@ body {
   margin: 10px;
 }
 
+.card {
+  border: 2px solid gray;
+}
+
 form {
   margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
